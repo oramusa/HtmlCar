@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../HtmlSBA/styles.css">
+    <title>Rent A Car</title>
+</head>
+<body>
+    <head>
+        <h1>Home</h1>
+    </head>
+    <div class="container">
+    <div>
+    <nav class="nvb">
+        <ul style="list-style-type: none;">
+       
+        <li><a href="../HtmlSBA/register.html">Register page</a></li>
+        <li><a href="../HtmlSBA/login.html">Login Page</a></li>
+        <li><a href="../HtmlSBA/Cars.html">Cars</a></li>
+    </ul>
+</nav>
+<div class="m-drp">
+<div class="dropdown">
+    <button class="dropbtn">Our Cars</button>
+    <div class="dropdown-content">
+      <a href="#">Ford</a>
+      <a href="#">Bmw</a>
+      <a href="#">Toyota</a>
+    </div>
+    <br><br>
+</div>
+</div>
+ <div class="btn">
+        <label for="days">Number of Days:</label>
+        <input type="number" id="days">
+        <button onclick="calculateTotal()">Calculate Total Price</button>
+        <br><br>
+        <label for="total">Total Price (incl. tax):</label>
+        <input type="text" id="total" readonly>
+        
+        <script>
+            function calculateTotal() {
+                var days = parseInt(document.getElementById("days").value);
+                var dailyRentCost = 20;
+                var totalWithoutTax = days * dailyRentCost;
+                var taxRate = 0.07;
+                var taxAmount = totalWithoutTax * taxRate;
+                var totalWithTax = totalWithoutTax + taxAmount;
+                document.getElementById("total").value = "$" + totalWithTax.toFixed(2);
+            }
+        </script>
+</div>
+<br>
+
+<label for="age">Enter Your Age:</label>
+	<input type="number" id="age">
+	<button onclick="checkEligibility()">Check Eligibility</button>
+	<br><br>
+	<div id="result"></div>
+
+  
+	
+	<script>
+		function checkEligibility() {
+			var age = parseInt(document.getElementById("age").value);
+			if (age >= 18) {
+				document.getElementById("result").innerHTML = "Congratulations! You are eligible to rent a car.";
+			} else {
+				document.getElementById("result").innerHTML = "Sorry, you are not eligible to rent a car.";
+			}
+		}
+	</script>
+
+
+
+
+ 
+</div>
+
+</body>
+</html>

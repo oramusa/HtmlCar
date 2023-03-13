@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../HtmlSBA/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login Page</h1>
+    <div class="container">
+    <nav class="nvb">
+    <ul style="list-style-type: none;">
+        
+        <li><a href="../HtmlSBA/home.html">Home</a></li>
+        <li><a href="../HtmlSBA/register.html">Register Page</a></li>
+        <li><a href="../HtmlSBA/Cars.html">Cars</a></li>
+    </ul>
+</nav>
+<div class="frm" >
+    <form>
+        <p>Please fill in blanks</p>
+       
+        <label for="email">email</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="password">password</label><br>
+        <input required pattern="pattern="/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,22}$/g" /" type="text" id="password" name="password"><br><br>
+       
+        <input type="submit" value="Submit">
+    </form>
+    
+    </div>
+</div>
+</body>
+</html>
